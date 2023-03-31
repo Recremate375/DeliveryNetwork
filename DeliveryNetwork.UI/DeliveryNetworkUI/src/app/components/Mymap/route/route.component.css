@@ -1,0 +1,19 @@
+.bgColor{
+    background-color: rgb(46,44,44);
+}
+
+.text{
+    color: #0d6efd;
+}
+
+.horizontal{
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.map{
+    margin-left: 75px;
+    height: 600px;
+    width: 1000px;
+}

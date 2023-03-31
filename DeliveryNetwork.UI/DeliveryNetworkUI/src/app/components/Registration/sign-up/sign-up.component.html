@@ -1,0 +1,21 @@
+<body class="bgColor text">
+
+    <form class="form-signin bgColor text" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div class="SignInBlock">
+        <h2 >Вход в аккаунт</h2>
+        <div *ngIf="invalidLogin" class="alert alert-danger">Неправильный логин или пароль.</div>
+        <h5>Логин</h5>
+        <input type="email" id="username" name="username" ngModel class="form-control bgColor text" placeholder="Введите ваш логин" required autofocus>
+        <h5>Пароль</h5>
+        <input type="password" id="password" placeholder="Введите пароль" name="password" ngModel class="form-control bgColor text" required>
+    </div>
+    <div class="SignInBlock">
+        <button type="button" class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+        <button type="button" class="btn btn-danger" style="margin-left: 30px;" routerLink="/SignIn">Вернуться</button>
+    </div>
+    </form>
+    <div class="SignInBlock">
+        <a class="nav-link active text-primary" aria-current="page" routerLink="/Registration">У вас нет аккаунта?</a>
+        <a class="nav-link active text-primary" aria-current="page" routerLink="/Registration">Вы можете зарегистрироваться тут.</a>
+    </div>
+</body>

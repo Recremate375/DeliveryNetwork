@@ -1,0 +1,12 @@
+<body class="bgColor text">
+    <div class="my-3" style="margin-left: 50px;">
+        <h3 class="horizontal">Маршрут доставки</h3>
+        <button type="button" class="btn btn-primary" routerLink="/AllOrders"><a>Вернуться к списку заказов</a></button>
+    </div>
+    <div class="map">
+        <ya-map [center]="[53.912091, 27.594754]" [zoom]="14" id="myMap">            
+            <ya-multiroute [referencePoints]="referencePoints"
+            [options]="{routeActiveStrokeColor: '2012e0'}"></ya-multiroute>
+        </ya-map>
+    </div>
+</body>

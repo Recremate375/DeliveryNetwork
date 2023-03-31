@@ -1,0 +1,33 @@
+<body class="bgColor">
+    <div class="container my-5 bgColor">
+        <h1 class="mb-3 text bgColor">Таблица заказов</h1>
+        <table class="table text table-borderless" *ngIf="orders && orders.length > 0">
+            <thead>
+                <tr class="text">
+                    <th>№</th>
+                    <th>Продукты</th>
+                    <th>Адрес</th>
+                    <th>Заказчик</th>
+                    <th>Исполнитель</th>
+                    <th>Статус</th>
+                    <th> </th>
+                    <th *ngIf="isDeliveryMan()"></th>
+                    <th *ngIf="isDeliveryMan()"></th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let order of orders; let ind=index">
+                    <td>{{ ind+1 }}</td>
+                    <td>{{ order.products }}</td>
+                    <td>{{ order.address }}</td>
+                    <td>{{ order.customer }}</td>
+                    <td>{{ order.executor }}</td>
+                    <td>{{ order.status }}</td>
+                    <td><button type="button" class="btn btn-primary" (click)="showFullOrder(order.address)">Показать заказ</button></td>
+                    <td *ngIf="isDeliveryMan() && dontHaveExecutor(order)"><button type="button" class="btn btn-success" (click)="takeToWork(order)">Взять в работу</button></td>
+                    <td *ngIf="isDeliveryMan() && isyourId(order) && isNotCompleted(order)"><button type="button" class="btn btn-warning" (click)="completedOrder(order)">Выполнено</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </body>

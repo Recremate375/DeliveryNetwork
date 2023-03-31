@@ -1,0 +1,40 @@
+.bgColor{
+    background-color: rgb(46,44,44);
+}
+
+.text{
+    color: #0d6efd;
+}
+h2{
+    margin-left: 5%;
+    margin-top: 0%;
+    width: 65%;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-right: 5%;
+}
+.leftSrt{
+    float:left;
+    width: 25%;
+}
+.rightStr{
+    float:right;
+    width: 70%;
+}
+
+.blockForDiv{
+    float: left;
+    margin: 50px 0 0 50px;
+}
+
+.imageBlock{
+    min-width: 200px;
+    min-height: 250px;
+    max-width: 200px;
+    max-height: 260px;
+    background: #1b5fac;
+    border-radius: 15px;
+    padding: 2%;
+}

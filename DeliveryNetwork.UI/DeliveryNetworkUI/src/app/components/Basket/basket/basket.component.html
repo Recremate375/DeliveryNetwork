@@ -1,0 +1,25 @@
+<body class="bgColor">
+    <div class="container my-5 bgColor">
+        <h1 class="mb-3 text bgColor">Корзина заказа</h1>
+        <table class="table text table-borderless" *ngIf="products && products.length > 0">
+            <thead>
+                <tr class="text">
+                    <th>№</th>
+                    <th>Название продукта</th>
+                    <th>Производитель</th>
+                    <th>Количество</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let product of products; let ind=index">
+                    <td>{{ind + 1}}</td>
+                    <td>{{ product.productName }}</td>
+                    <td>{{ product.manufactor }}</td>
+                    <td>{{ product.count }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <td><button type="button" class="btn btn-primary" routerLink="/Basket/CreateOrder">Перейти к создаю заказа</button></td>
+    </div>
+</body>

@@ -1,0 +1,14 @@
+.bgColor{
+    background-color: rgb(46,44,44);
+}
+
+.text{
+    color: #0d6efd;
+}
+
+.registerBlock{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5%;
+    width:max-content;
+}

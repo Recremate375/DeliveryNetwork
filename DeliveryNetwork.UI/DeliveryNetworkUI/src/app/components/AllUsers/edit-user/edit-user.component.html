@@ -1,0 +1,22 @@
+<body class="bgColor text">
+
+    <form #form="ngForm" class="EditUserBlock" (ngSubmit)="updateUser()">
+        <h2>Изменение пользователя</h2>
+        <h5>Id</h5>
+        <input type="text" class="bgColor text form-control" id="id" name="id"
+        [(ngModel)] ="editUser.id">
+        <h5>Логин</h5>
+        <input type="text" class="bgColor text form-control" id="login" name="login"
+        [(ngModel)] ="editUser.login">
+        <h5>ФИО</h5>
+        <input type="text" class="bgColor text form-control" id="name" name="name"
+        [(ngModel)] ="editUser.fio">
+        <h5>Роль</h5>
+        <input type="text" class="bgColor text form-control" id="surname" name="surname"
+        [(ngModel)]="editUser.role">
+        <div class="EditUserBlock">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <button type="button" class="btn btn-danger" style="margin-left: 30px;" routerLink="/AllUsers">Отмена</button>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,30 @@
+<body class="bgColor">
+    <div class="container my-5 bgColor">
+        <h1 class="mb-3 text bgColor">Таблица польозвателей</h1>
+        <table class="table text table-borderless" *ngIf="users && users.length > 0">
+            <thead>
+                <tr class="text">
+                    <th>№</th>
+                    <th>ID</th>
+                    <th>Логин</th>
+                    <th>ФИО</th>
+                    <th>Роль</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let user of users; let ind=index">
+                    <td>{{ ind+1 }}</td>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.login }}</td>
+                    <td>{{ user.fio }}</td>
+                    <td>{{ user.role }}</td>
+                    <td><button type="button" class="btn btn-info" [routerLink]="['edit', user.id]">Изменить пользователя</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Удалить пользователя</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </body>

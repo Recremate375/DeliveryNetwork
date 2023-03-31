@@ -1,0 +1,34 @@
+<body class="bgColor text">
+
+    <form #form="ngForm" class="registerBlock" (ngSubmit)="addUser()">
+        <h2 >Регистрация</h2>
+        <h5>Логин</h5>
+        <input placeholder="Введите логин" type="text" class="bgColor text form-control" id="login" name="login"
+        [(ngModel)] ="newUser.login">
+        <h5>Пароль</h5>
+        <input type="password" placeholder="Введите пароль" type="text" class="bgColor text form-control" id="password" name="password"
+        [(ngModel)]="newUser.password">
+        <h5>Повторите ваш пароль</h5>
+        <input type="password" placeholder="Повторите ваш пароль" type="text" class="bgColor text form-control">
+        <h5>Имя</h5>
+        <input placeholder="Введите ваше имя" type="text" class="bgColor text form-control" id="name" name="name"
+        [(ngModel)] ="newUser.name">
+        <h5>Фамилия</h5>
+        <input placeholder="Введите вашу фамилию" type="text" class="bgColor text form-control" id="surname" name="surname"
+        [(ngModel)]="newUser.surname">
+        <h5>Отчество</h5>
+        <input placeholder="Введите ваше отчество" type="text" class="bgColor text form-control" id="lastname" name="lastname"
+        [(ngModel)]="newUser.lastname">
+        <h5>Номер паспорта</h5>
+        <input placeholder="Введите ваш пароль" type="text" class="bgColor text form-control" id="passport" name="passport"
+        [(ngModel)]="newUser.passport">
+        <div class="registerBlock">
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            <button type="button" class="btn btn-danger" style="margin-left: 30px;" routerLink="/Home">Назад</button>
+        </div>
+    </form>
+    <div class="registerBlock">
+        <a class="nav-link active text-primary" aria-current="page" routerLink="/SignIn">У вас уже есть аккаунт?</a> 
+        <a class="nav-link active text-primary" aria-current="page" routerLink="/SignIn">Вы можете войти тут.</a>
+    </div>
+</body>

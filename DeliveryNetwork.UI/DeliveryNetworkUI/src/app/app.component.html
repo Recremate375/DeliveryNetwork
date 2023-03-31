@@ -1,0 +1,42 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-primary">
+    <div class="container-fluid text-primary">
+      <a class="navbar-brand text-primary" routerLink="/">Delivery Network</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-primary" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/allProducts">Список продуктов</a>
+          </li>
+          <li *ngIf="(isUserAuthenticated() && isAdminOrDeliveryMan())">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/AllOrders">Список заказов</a>
+          </li>
+          <li *ngIf="isUserAuthenticated() && isAdmin()">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/AllUsers">Список пользователей</a>
+          </li>
+          <li *ngIf="isUserAuthenticated()">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/Account">Аккаунт</a>
+          </li>
+          <li *ngIf="isUserAuthenticated() && isDeliveryMan()">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/Route">Маршрут доставки</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class=" align-self-end" *ngIf="!isUserAuthenticated()">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/SignIn">Войти/зарегистрироваться</a>
+          </li>
+          <li *ngIf="isUserAuthenticated() && !isAdminOrDeliveryMan()">
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/Basket">Корзина</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body class="bgColor">
+  <router-outlet></router-outlet>
+</body>

@@ -1,0 +1,20 @@
+.bgColor{
+    background-color: rgb(46,44,44);
+}
+
+.text{
+    color: #0d6efd;
+}
+
+.TextBlock{
+    margin-left: auto;
+    margin-right: auto;
+    width:max-content;
+    text-align: center;
+}
+.imageBlock{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,6 @@
+<ya-map [center]="[53.912091, 27.594754]" [zoom]="14" id="myMap">
+            <ya-placemark [geometry]="[53.912091, 27.594754]"></ya-placemark>
+            <ya-placemark [geometry]="[53.9210216,27.5908435]"></ya-placemark>
+            <ya-multiroute [referencePoints]="['{{FirstPoint}}', '{{SecondPoint}}']"
+            [options]="{routeActiveStrokeColor: 'ff0000'}"></ya-multiroute>
+        </ya-map>
